@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>13-mustache插值语法v-once指令</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{msg}}</h2>
+  <!-- v-once不随响应式改变-->
+  <h2 v-once>{{msg}}</h2>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      msg: '你好呀！'
+    }
+  })
+</script>
+</body>
+</html>

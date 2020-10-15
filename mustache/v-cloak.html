@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>13-mustache插值语法v-coak指令</title>
+  <style>
+    [v-cloak]{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div id="app" v-cloak>
+  {{msg}}
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  /**
+   * 在vue解析之前，div中有v-cloak属性，解析后则无
+   *
+   */
+  setTimeout(function () {
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: '你好呀！'
+      }
+    })
+  },1000)
+</script>
+</body>
+</html>

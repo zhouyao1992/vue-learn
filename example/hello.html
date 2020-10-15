@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-vue初体验</title>
+</head>
+<body>
+<div id="app">{{msg}}</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    //let(变量)/const(常量 )，代码规范缩进2个空格
+   const app = new Vue({
+         el: '#app',
+         data:{
+             msg: 'hello world!'
+         }
+    })
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-vue计数器</title>
+</head>
+<body>
+<div id="app">
+   <h2>当前计数{{count}}</h2>
+   <!--<button v-on:click="count++">+</button>-->
+    <!--<button v-on:click="count--">-</button>-->
+    <!--@click为v-on:click语法糖简写-->
+    <button @click="add">+</button>
+    <button @click="sub">-</button>
+
+ </div>
+
+ <script src="../js/vue.js"></script>
+ <script>
+    /**
+     * vue中mvvm模型
+     * m 模型层数据模型
+     * v 视图层
+     * vm  vue中间转换层负责将m模型层中数据渲染到视图层中去，捕捉dom元素的数据变化回调给m
+      */
+    const app = new Vue({
+        el: '#app',
+        data:{
+             count:0
+
+        },
+        methods:{
+          add: function(){
+            console.log("add execute{}");
+            this.count++;
+
+          },
+          sub: function(){
+             console.log("sub execute{}");
+             this.count--;
+
+          }
+        }
+    })
+ </script>
+
+ </body>
+ </html>

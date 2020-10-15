@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12-mustache插值语法</title>
+</head>
+<body>
+<div id="app">
+  <!--mustache语法中，不仅可以直接写变量，也可以写简单的表达式-->
+  <h2>{{msg}}</h2>
+  <h2>{{msg}}地球</h2>
+  <h2>{{firstName + '' + lastName}}</h2>
+  <h2>{{firstName}} {{lastName}}</h2>
+  <h2>{{number * 2}}</h2>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      msg: '你好呀！',
+      firstName: '第一人称',
+      lastName: '最后人称',
+      number: 100
+    }
+  })
+</script>
+</body>
+</html>

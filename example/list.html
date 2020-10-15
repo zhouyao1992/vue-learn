@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-vue列表展示</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="item in movies">{{item}}</li>
+    </ul>
+
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+    const app =  new Vue({
+        el: '#app',
+        data: {
+            msg: '电影频道',
+            movies: ['大话西游','红楼梦','三国演义','水浒传']
+        }
+    })
+</script>
+</body>
+</html>
